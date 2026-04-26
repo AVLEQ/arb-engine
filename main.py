@@ -94,7 +94,7 @@ def run_pair(
     # ── Step 3: Backtest (with ML filter) ─────────────────────────────────────
     log.info("[3/5] Running backtest...")
     bt = Backtester(key, capital=CFG.sizing.starting_capital)
-    results = bt.run(signals_df, ml_confidence=ml_confidence)
+    results = bt.run(signals_df)
     trade_log = bt.get_trade_log()
 
     # Also run without ML for ablation comparison

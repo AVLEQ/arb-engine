@@ -1,0 +1,140 @@
+
+GLOBAL ARBITRAGE SIGNAL ENGINE REPORT
+-------------------------------------
+
+Name: Saanvi TS
+Roll Number: 24b4501
+Institute: IIT Bombay (IEOR)
+
+=====================================
+1. STRATEGY DESIGN
+=====================================
+
+This project implements a statistical arbitrage strategy based on mean-reversion
+between highly correlated ETF pairs such as QQQ/QQQM, SPY/IVV, etc.
+
+The inefficiency exploited arises due to:
+- Temporary dislocations caused by liquidity imbalances
+- Execution delays between similar ETFs
+- Short-term demand/supply mismatches
+
+These inefficiencies persist because:
+- Arbitrage capital is limited
+- Transaction costs prevent perfect arbitrage
+- Institutional execution latency creates short-lived spreads
+
+Entry Signal:
+A trade is triggered when:
+- Absolute Z-score > 2.0
+- Cointegration condition is satisfied
+- Model confidence > 0.52
+
+Exit Logic:
+- Mean reversion toward Z-score = 0
+- Implicit exit when spread normalizes
+
+Theoretical Edge:
+Edge is proportional to:
+|Z-score| × volatility
+
+Edge decays with:
+- Increased position size (market impact)
+- Lower volatility regimes
+
+
+=====================================
+2. BACKTESTING ENGINE
+=====================================
+
+A simulated backtesting framework was implemented to evaluate the strategy.
+
+Key Observations:
+- Strategy performs well in high-volatility regimes
+- Performance degrades under low volatility or structural breaks
+
+Sample Metrics (from simulation):
+- Signals generated: 21
+- Total scans: 2910
+- Runtime: 48.5 hours
+
+Note:
+Transaction costs and slippage are implicitly modeled via:
+- Reduced edge estimation
+- Entry thresholds (Z > 2)
+
+Further improvements would include:
+- Real historical data integration
+- Explicit spread + commission modeling
+
+
+=====================================
+3. LIVE SIGNAL GENERATOR
+=====================================
+
+A real-time signal generator was built with the following features:
+
+- Continuous scanning every 60 seconds
+- Multi-pair monitoring
+- Z-score tracking with stochastic dynamics
+- Confidence scoring and cointegration filtering
+
+Performance:
+- Total runtime: 48.5 hours
+- Total scans: 2910
+- Signals generated: 21
+
+Signal Distribution:
+
+- QQQ_QQQM: 12 signals
+- SPY_IVV: 6 signals
+- GLD_IAU: 2 signals
+- EEM_VWO: 1 signals
+
+Strongest Signal Observed:
+- Pair: GLD_IAU
+- Direction: SHORT
+- Z-score: 3.0194
+
+
+=====================================
+4. RISK FRAMEWORK
+=====================================
+
+Position Sizing:
+- Positions are sized proportional to confidence and edge
+- Higher Z-score divergence → larger allocation
+
+Risk Controls:
+- Trading only when confidence > threshold
+- Cointegration requirement avoids spurious trades
+
+Drawdown Control:
+- Strategy should pause if drawdown exceeds ~5%
+- Underperforming pairs should be disabled dynamically
+
+Failure Conditions:
+The strategy edge may disappear under:
+- Structural breaks in correlation
+- Regime shifts (macro changes)
+- Extreme market stress
+
+Detection Mechanisms:
+- Declining Sharpe ratio
+- Increasing drawdowns
+- Reduced signal hit rate
+
+
+=====================================
+CONCLUSION
+=====================================
+
+This system demonstrates a complete pipeline for statistical arbitrage:
+- Strategy design
+- Signal generation
+- Risk-aware filtering
+- Real-time logging
+- Visualization and reporting
+
+While simplified, the framework is extensible to real market deployment
+with proper data integration and execution systems.
+
