@@ -1,0 +1,82 @@
+{
+  "pair": "EEM_VWO",
+  "metrics_ml": {
+    "total_return_pct": -0.31,
+    "ann_return_pct": -0.08,
+    "ann_volatility_pct": 0.09,
+    "sharpe_ratio": -9.162,
+    "sortino_ratio": -9.162,
+    "calmar_ratio": -0.262,
+    "max_drawdown_pct": -0.31,
+    "backtest_days": 964,
+    "total_trades": 12,
+    "win_rate_pct": 33.3,
+    "avg_hold_days": 11.4,
+    "avg_net_pnl": -257.78,
+    "total_gross_pnl": -872.78,
+    "total_costs": 2220.62,
+    "total_net_pnl": -3093.41,
+    "cost_drag_pct": 254.4,
+    "annual_turnover_pct": 103.7,
+    "exit_reasons": {
+      "max_hold": 7,
+      "reversion": 5
+    }
+  },
+  "metrics_base": {
+    "total_return_pct": -0.31,
+    "ann_return_pct": -0.08,
+    "ann_volatility_pct": 0.09,
+    "sharpe_ratio": -9.162,
+    "sortino_ratio": -9.162,
+    "calmar_ratio": -0.262,
+    "max_drawdown_pct": -0.31,
+    "backtest_days": 964,
+    "total_trades": 12,
+    "win_rate_pct": 33.3,
+    "avg_hold_days": 11.4,
+    "avg_net_pnl": -257.78,
+    "total_gross_pnl": -872.78,
+    "total_costs": 2220.62,
+    "total_net_pnl": -3093.41,
+    "cost_drag_pct": 254.4,
+    "annual_turnover_pct": 103.7,
+    "exit_reasons": {
+      "max_hold": 7,
+      "reversion": 5
+    }
+  },
+  "monte_carlo": {
+    "mean_sharpe": -0.844,
+    "median_sharpe": -0.88,
+    "p5_sharpe": -1.361,
+    "p95_sharpe": -0.168,
+    "pct_positive": 2.8,
+    "n_simulations": 2000
+  },
+  "walk_forward_sharpe": -0.73,
+  "regime_state": "SUSPENDED",
+  "regime_flags": {
+    "low_sharpe": "True",
+    "coint_broken": "True",
+    "fx_spike": "False",
+    "high_vix": "False"
+  },
+  "position_size_example": {
+    "edge_bps": 12.0,
+    "spread_vol": 0.015,
+    "realized_vol_annual": 0.12,
+    "vix": 18.0,
+    "full_kelly_fraction": 0.2,
+    "fractional_kelly_pct": 25,
+    "after_kelly_frac": 0.05,
+    "after_vol_scale_frac": 0.0625,
+    "regime_multiplier": 1.0,
+    "after_regime_frac": 0.0625,
+    "final_fraction": 0.0625,
+    "notional_usd": 62500.0,
+    "pct_of_capital": 6.25
+  },
+  "ml_trained": false,
+  "runtime_sec": 4.5
+}

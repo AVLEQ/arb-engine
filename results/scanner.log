@@ -1,0 +1,9 @@
+2026-04-26 06:19:04 | INFO     | ============================================================
+2026-04-26 06:19:04 | INFO     |   LIVE ARBITRAGE SIGNAL SCANNER
+2026-04-26 06:19:04 | INFO     |   Pairs:    ['GLD/IGLD', 'SPY/INDA', 'EEM/INDA', 'IEF/GOVT', 'XLK/INFY']
+2026-04-26 06:19:04 | INFO     |   Interval: 60s
+2026-04-26 06:19:04 | INFO     |   Duration: 48.0h
+2026-04-26 06:19:04 | INFO     |   Log:      C:\Users\SAANVI T S\Downloads\arb_engine_saanvi\arb_engine\results\signal_log.jsonl
+2026-04-26 06:19:04 | INFO     |   Dry run:  False
+2026-04-26 06:19:04 | INFO     | ============================================================
+2026-04-26 06:19:04 | INFO     | Scan #1 | Elapsed: 0.00h | Remaining: 48.00h

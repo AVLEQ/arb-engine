@@ -1,0 +1,82 @@
+{
+  "pair": "GLD_IAU",
+  "metrics_ml": {
+    "total_return_pct": -3.01,
+    "ann_return_pct": -0.8,
+    "ann_volatility_pct": 1.41,
+    "sharpe_ratio": -3.756,
+    "sortino_ratio": -4.119,
+    "calmar_ratio": -0.173,
+    "max_drawdown_pct": -4.6,
+    "backtest_days": 964,
+    "total_trades": 68,
+    "win_rate_pct": 51.5,
+    "avg_hold_days": 5.5,
+    "avg_net_pnl": -443.12,
+    "total_gross_pnl": -13400.61,
+    "total_costs": 16731.56,
+    "total_net_pnl": -30132.17,
+    "cost_drag_pct": 124.9,
+    "annual_turnover_pct": 798.9,
+    "exit_reasons": {
+      "reversion": 64,
+      "max_hold": 4
+    }
+  },
+  "metrics_base": {
+    "total_return_pct": -5.11,
+    "ann_return_pct": -1.36,
+    "ann_volatility_pct": 1.13,
+    "sharpe_ratio": -5.181,
+    "sortino_ratio": -5.002,
+    "calmar_ratio": -0.266,
+    "max_drawdown_pct": -5.11,
+    "backtest_days": 964,
+    "total_trades": 52,
+    "win_rate_pct": 42.3,
+    "avg_hold_days": 5.6,
+    "avg_net_pnl": -982.23,
+    "total_gross_pnl": -39412.57,
+    "total_costs": 11663.39,
+    "total_net_pnl": -51075.96,
+    "cost_drag_pct": 29.6,
+    "annual_turnover_pct": 562.5,
+    "exit_reasons": {
+      "reversion": 49,
+      "max_hold": 3
+    }
+  },
+  "monte_carlo": {
+    "mean_sharpe": -0.551,
+    "median_sharpe": -0.568,
+    "p5_sharpe": -1.249,
+    "p95_sharpe": 0.24,
+    "pct_positive": 11.1,
+    "n_simulations": 2000
+  },
+  "walk_forward_sharpe": -0.315,
+  "regime_state": "SUSPENDED",
+  "regime_flags": {
+    "low_sharpe": "True",
+    "coint_broken": "True",
+    "fx_spike": "False",
+    "high_vix": "False"
+  },
+  "position_size_example": {
+    "edge_bps": 12.0,
+    "spread_vol": 0.015,
+    "realized_vol_annual": 0.12,
+    "vix": 18.0,
+    "full_kelly_fraction": 0.2,
+    "fractional_kelly_pct": 25,
+    "after_kelly_frac": 0.05,
+    "after_vol_scale_frac": 0.0625,
+    "regime_multiplier": 1.0,
+    "after_regime_frac": 0.0625,
+    "final_fraction": 0.0625,
+    "notional_usd": 62500.0,
+    "pct_of_capital": 6.25
+  },
+  "ml_trained": true,
+  "runtime_sec": 5.1
+}
